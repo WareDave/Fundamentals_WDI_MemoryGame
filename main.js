@@ -1,4 +1,21 @@
 console.log("Up and running!");
+
+var inPlay = [];
+
+
+var score = 0;
+var highscoreStore = window.localStorage.getItem('highscoreStore');
+if(window.localStorage.getItem('highscoreStore') == null){
+				if (score > highscoreStore){
+					window.localStorage.setItem("highscoreStore", score);
+				} else {
+					window.localStorage.setItem("highscoreStore", score);
+		}
+	}
+
+if (inPlay.length === 2) {
+	checkForMatch();
+
 var cards = [
   {
     rank: "queen",
@@ -60,6 +77,13 @@ function createBoard() {
     cardTable.appendChild(cardElement);
   }
 }
+function pageReset() {
+  document.getElementById('reset-button');
+}
+
+
 
 createBoard();
+
+pageReset();
 
